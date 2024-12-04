@@ -1,4 +1,4 @@
-package com.advance.concept.Collections;
+package com.advance.concept.Collections.Maps;
 
 import java.util.*;
 

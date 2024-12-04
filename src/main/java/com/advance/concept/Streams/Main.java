@@ -75,9 +75,17 @@ public class Main {
         System.out.println("Words starts with S: "+ listOfLists.stream().anyMatch(s->s.startsWith("S")));
         String reduceRes = listOfLists.stream().reduce("Reduced Strings are: ",(pS,ele)->pS+" "+ele);
         System.out.println(reduceRes);// This will return a single string
-
-
     }
+
+    /*
+    Short circuit operations: They provide performance benefits by avoiding the unnecessary computations when the desired result can be obtained early.
+    -> They are particularly useful when working with large or infinite streams.
+
+    1. anyMatch():  It checks the stream if it satisfies the given Condition.
+    2. findFirst(): It checks the element that matches a given condition and stops processing when it finds it.
+
+    Note: They are lazy, meaning they are not executed until a terminal operation is invoked.
+     */
     public static void main(String[] args) {
         intermediateOperations();
         terminalOperations();
