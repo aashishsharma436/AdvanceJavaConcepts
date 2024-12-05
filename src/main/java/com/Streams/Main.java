@@ -1,4 +1,4 @@
-package com.advance.concept.Streams;
+package com.Streams;
 
 import java.util.*;
 import java.util.stream.Collectors;

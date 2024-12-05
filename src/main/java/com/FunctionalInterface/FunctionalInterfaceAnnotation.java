@@ -1,4 +1,4 @@
-package com.advance.concept.FunctionalInterface;
+package com.FunctionalInterface;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;

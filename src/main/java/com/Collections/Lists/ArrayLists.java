@@ -1,4 +1,4 @@
-package com.advance.concept.Collections.Lists;
+package com.Collections.Lists;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

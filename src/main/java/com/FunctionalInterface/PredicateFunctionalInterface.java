@@ -1,4 +1,4 @@
-package com.advance.concept.FunctionalInterface;
+package com.FunctionalInterface;
 
 /*
     Predicate Functional Interface

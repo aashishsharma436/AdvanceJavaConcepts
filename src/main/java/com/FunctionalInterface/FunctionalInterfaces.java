@@ -1,7 +1,5 @@
-package com.advance.concept.FunctionalInterface;
+package com.FunctionalInterface;
 
-import java.lang.FunctionalInterface;
-import java.util.function.Consumer;
 /*
     1. Functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit.
     2. Lambda function is used to represent the instance of a functional interface.

@@ -1,4 +1,4 @@
-package com.advance.concept.Collections.Maps;
+package com.Collections.Maps;
 
 import java.util.*;
 public class NavigableMaps {

@@ -1,4 +1,4 @@
-package com.advance.concept.Lambda;
+package com.Lambda;
 
 import java.util.*;
 
