@@ -14,6 +14,7 @@ public interface FunctionalInterfaceAnnotation {
 }
 class Bifunction implements FunctionalInterfaceAnnotation{
     public static void bifunction() {
+        //BiFunction is an interface that takes argument 2 and generate single output
         BiFunction<String, Integer, String> concatenate = (str1, str2) -> str1 + str2;
         BiFunction<Integer,Double,String> combine = (integer,decimal) -> "Combined Value: "+integer+" and "+decimal;
         String combinedResult = combine.apply(10,20.5);
@@ -39,8 +40,12 @@ class Bifunction implements FunctionalInterfaceAnnotation{
         bifunction();
         unaryOperator();
         binaryOperator();
-        System.out.println("This is the output of Functional Interface: "+ new Bifunction().calculate(5));
+        System.out.println("This is the output of Functional Interface using lambda: "+ interfaces.calculate(5));
+        System.out.println("This is the output of functional interface using overiding: "+new Bifunction().calculate(5));
     }
+
+    static FunctionalInterfaceAnnotation interfaces = (int s) -> s*s;
+
 
     @Override
     public int calculate(int x) {

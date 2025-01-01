@@ -2,9 +2,9 @@ package com.FunctionalInterface;
 
 /*
     Predicate Functional Interface
-        -> It is functional interface like, it accepts the single argument and generates the boolean value
+        -> It is a functional interface like, it accepts the single argument and generates the boolean value
         -> The implementation of Predicate functional interface also encapsulates the logic of filtering
-        -> There is another predicate, which is known as Bi-Predicate and take two arguments as a input
+        -> There is another predicate, which is known as Bi-Predicate and take two arguments as an input
 */
 
 interface Predicate<T>{

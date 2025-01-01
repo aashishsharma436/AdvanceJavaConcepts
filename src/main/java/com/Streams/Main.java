@@ -2,11 +2,12 @@ package com.Streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     /*
     Stream API is used to process the collections of Objects.
-    We can perform the operations like filtering, mapping, reducing and sorting the data by using streams
+    We can perform operations like filtering, mapping, reducing and sorting the data by using streams
 
     Benefits of Stream
     -> No storage, Pipeline of functions, Laziness, Can be infinite, can be parallelized
@@ -57,13 +58,13 @@ public class Main {
     }
 
     /*
-     In Terminal Operations: It is type of operations that return the result. These Operations are not processed further just return a final result value
+     In Terminal Operations: It is a type of operations that return the result. These Operations are not processed further, return a final result value
 
      Important Terminal Operations
      1. collect(): This method is used to return the result of the intermediate operations performed on the stream.
      2. forEach(): This method is used to iterate through every element of the stream.
      3. reduce(): This method is used to reduce the elements of a stream to a single value. This reduce method takes BinaryOperator as a parameter.
-     4. count(): Returns the count of elements in the stream
+     4. count(): Returns the count of elements in stream
      5. findFirst(): Returns the first element of the stream.
      6. allMatch(): Checks if all elements of the stream match a given predicate.
      7. anyMatch(): Checks if any elements of the stream matches a given predicate.
@@ -75,6 +76,14 @@ public class Main {
         System.out.println("Words starts with S: "+ listOfLists.stream().anyMatch(s->s.startsWith("S")));
         String reduceRes = listOfLists.stream().reduce("Reduced Strings are: ",(pS,ele)->pS+" "+ele);
         System.out.println(reduceRes);// This will return a single string
+
+        List<String> listOfLists1 = Arrays.asList("Reflection","Collection"," Stream");
+
+        listOfLists1 = Stream.concat(listOfLists.stream(),listOfLists1.stream()).collect(Collectors.toList());
+        System.out.println("Concatinate two lists:"+listOfLists1);
+
+        String value = listOfLists1.stream().sorted(Comparator.reverseOrder()).reduce("Sorted in reverse order",(e,f)->e+" "+f);
+        System.out.println(value);
     }
 
     /*
@@ -102,8 +111,8 @@ public class Main {
         System.out.println(listOfLists);
     }
     public static void main(String[] args) {
-        intermediateOperations();
+        //intermediateOperations();
         terminalOperations();
-        parallelStreams();
+        //parallelStreams();
     }
 }

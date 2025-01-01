@@ -3,14 +3,14 @@ package com.FunctionalInterface;
 /*
     1. Functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit.
     2. Lambda function is used to represent the instance of a functional interface.
-    3. A functional interface can have any number of default method.
+    3. A functional interface can have any number of default methods.
     4. Functional interface is additionally recognized as SAM (Single Abstract Method) interface.
 
 */
 
 /*
     There are some built in Functional Interfaces
-    1. Runnable =  This interface contains only the run() method.
+    1. Runnable = This interface contains only the run() method.
     2. Comparable = This interface contains only CompareTo() method.
     3. ActionListener = This interface contains only actionPerformed() method.
     4. Callable = This interface contains only call() method.
