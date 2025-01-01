@@ -29,7 +29,7 @@ public class TreeMaps {
     }
 
     static void sortedMapInReverseOrder(){
-        TreeMap<Integer, String> tree_map = new TreeMap<>(Comparator.reverseOrder()); // O(1)
+        Map<Integer, String> tree_map = Collections.synchronizedSortedMap(new TreeMap<Integer,String>(Comparator.reverseOrder()));// O(1)
 
         // Mapping string values to int keys using put()
         // method

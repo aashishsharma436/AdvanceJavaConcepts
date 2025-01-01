@@ -112,3 +112,19 @@
 | Circular dependency or partial dependencies result with setter dependency injection because object creation happens before the injection                          | No scope for circular dependecy because dependencies are resolves before object creation itself.|
 | Preferred option when properties are less and mutuable objects can be created                                                                                     | Preferred option when properties on the bean are more and immutable objects are important for application|
 
+## Annotations
+- ```@SpringBootApplication```: It combines 3 annotations ```@ComponentScan, @Configuration``` and ```@AutoConfiguration```
+- ```@ComponentScan```: This annotation scans the component like ```@Component, @Service, @Repository``` in the package of annotated class and its sub-packages.
+- ```@Configuration```: This annotation configures the bean and packages in the class path.
+- ```@AutoConfiguration```: This annotation automatically configures beans in the class path and automatically scans the dependencies according to the application need.
+- ```@Component```: This annotation is used to mark a class as a spring bean that will be managed by the spring container.
+- ```@RestController```: This annotation is used to define a Restful Webservice Controller. It is a specialized version of ```@Controller``` annotation that includes the ```@ResponseBoody``` annotation by default.
+- ```@RequestMapping```: This annotation is used to map the HTTP request to a specific method in the controller. It can be applied at the class level to define a base URL for all methods, or at method level to specify the specific URL mapping.
+- ```@Controller```: To mark a class to act like as a controller, which handles the HTTP Requests.
+- ```@ResponseBody```: It tells a controller that the object returned is automatically serialized in JSON and passed back into HttpResponse Object.
+- ```@Service```: To mark a class as a service provider or as a Business Logic layer.
+- ```@Bean```: It is applied on a method to specify that it returns a bean to be managed by Spring context.
+- ```@EnableAutoConfiguration```: When we want to customize the autoconfiguration.
+- ```@Transactional```: It indicated that the particular method should be executed within the context of the transaction. If the transaction becomes successful, then the changes made to the database are committed, If any transaction fails, all the changes made to that particular transaction can be rollback, and it will ensure that the database remains in a consistent state.
+- ```@ControllerAdvice```: It is a specialization of the ```@Component``` annotation. It allows defining global exception handling logic that applies across multiple controllers. and Can also be used to define model attributes and bind them to multiple controllers.
+- ```@ExceptionHandler```: It is used to handle specific exceptions in a method. It can be used within a controller or a class annotated with ```@ControllerAdvice```. It targets exception handling for specific scenarios and can return custom error response, views, or JSON objects.

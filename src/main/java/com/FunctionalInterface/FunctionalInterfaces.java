@@ -24,6 +24,8 @@ package com.FunctionalInterface;
 
  */
 
+import java.util.concurrent.Callable;
+
 public class FunctionalInterfaces {
     public static void main(String args[]){
         int a = 5;
@@ -41,7 +43,12 @@ public class FunctionalInterfaces {
         System.out.println(new PredicateFunctionalInterface().test("This is a String class"));
 
         // 
-
+        Callable<Integer> callable = new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                return 0;
+            }
+        };
 
     }
 }
