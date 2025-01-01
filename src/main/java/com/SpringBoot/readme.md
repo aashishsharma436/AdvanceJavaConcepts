@@ -112,6 +112,3 @@
 | Circular dependency or partial dependencies result with setter dependency injection because object creation happens before the injection                          | No scope for circular dependecy because dependencies are resolves before object creation itself.|
 | Preferred option when properties are less and mutuable objects can be created                                                                                     | Preferred option when properties on the bean are more and immutable objects are important for application|
 
-  - The bean must include the getter and setter methods for the properties
-
-
