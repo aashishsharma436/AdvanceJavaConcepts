@@ -86,8 +86,24 @@ public class Main {
 
     Note: They are lazy, meaning they are not executed until a terminal operation is invoked.
      */
+
+
+    /*
+    Parallel stream is a feature of java, in which we used the multiple cores of processor.
+    Normally any java code has one stream of processing, where it is executed sequentially,
+    whereas by using parallel streams, we can divide the code into multiple streams that are executed in parallel
+    on separate cores, and the final result is the combination of the individual outcomes
+
+    The order of execution is not under our control
+     */
+    public static void parallelStreams(){
+        List<String> listOfLists = Arrays.asList("Reflection","Collection"," Stream");
+        listOfLists = listOfLists.parallelStream().map(e->e+"parallel").collect(Collectors.toList());
+        System.out.println(listOfLists);
+    }
     public static void main(String[] args) {
         intermediateOperations();
         terminalOperations();
+        parallelStreams();
     }
 }
