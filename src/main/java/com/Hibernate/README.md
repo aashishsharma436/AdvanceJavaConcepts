@@ -67,3 +67,18 @@
 - It is a programming technique that maps the objects to the data stored in the database.
 - The ORM tool internally uses the JDBC API to interact with the Database.
 
+## Lazy Loading 
+- This is the default fetch type in Hibernate
+- It means the associated entity will be fetched only when it is accessed for the first time. This can improve in cases where the associated entity is not required most of the time.
+- This can be more efficient than eagerly fetching the entity, especially if the entity has a lot of data and is not needed for every use of parent entity.
+- It is important to note that using ```FetchType.LAZY ``` can result in additional DB queries being issued when the associated entity is accessed. So it may not always be the most efficient option.
+
+## Eager Loading
+- This fetch type means that the associated entity will be fetched together with the main entity is fetched from the DB.
+
+## Pagination in DBMS
+- It is the process of dividing a large set of data into smaller, more manageable chunks or pages for easier navigation and faster loading times.
+- **Faster page loading times:** By limiting the amount of data that is loaded at once, pagination can improve the performance of web pages, reducing the load time and improving the user experience.
+- **Improved User Experience:** By breaking up the data into smaller pages, users can more easily navigate through the data and find the information they need.
+- **Reduced Server Load** By limiting the amount of data that is loaded at once, pagination can reduce the strain on the server and improve scalability.
+
