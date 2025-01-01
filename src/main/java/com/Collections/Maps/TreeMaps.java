@@ -11,18 +11,33 @@ public class TreeMaps {
     6. It does not allow the null keys in it.
 
      */
-    static void Example1stConstructor()
+    static void NaturalMap()
     {
         // Creating an empty TreeMap
-        TreeMap<Integer, String> tree_map = new TreeMap<Integer, String>(); // O(1)
+        TreeMap<Integer, String> tree_map = new TreeMap<>(); // O(1)
 
         // Mapping string values to int keys using put()
         // method
-        tree_map.put(10, "I"); // O(log n)
+        tree_map.put(20, "I"); // O(log n)
+        tree_map.put(15, "4"); // O(log n)
+        tree_map.put(10, "Geeks"); // O(log n)
+        tree_map.put(25, "Welcomes"); // O(log n)
+        tree_map.put(30, "You"); // O(log n)
+
+        // Printing the elements of TreeMap
+        System.out.println("TreeMap: " + tree_map); // O(n)
+    }
+
+    static void sortedMapInReverseOrder(){
+        TreeMap<Integer, String> tree_map = new TreeMap<>(Comparator.reverseOrder()); // O(1)
+
+        // Mapping string values to int keys using put()
+        // method
+        tree_map.put(30, "I"); // O(log n)
         tree_map.put(15, "4"); // O(log n)
         tree_map.put(20, "Geeks"); // O(log n)
         tree_map.put(25, "Welcomes"); // O(log n)
-        tree_map.put(30, "You"); // O(log n)
+        tree_map.put(10, "You"); // O(log n)
 
         // Printing the elements of TreeMap
         System.out.println("TreeMap: " + tree_map); // O(n)
@@ -33,9 +48,8 @@ public class TreeMaps {
     public static void main(String[] args)
     {
         System.out.println("TreeMap using TreeMap() constructor:\n");
-
-        // Calling constructor
-        Example1stConstructor(); // O(n log n) for put and
+        NaturalMap(); // O(n log n) for put and
+        sortedMapInReverseOrder();
         // O(n) for printing
     }
 }
