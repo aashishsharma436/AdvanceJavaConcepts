@@ -5,7 +5,7 @@ import java.util.*;
 public class HashMaps {
     /*
     HashMap
-    -> It is a part of java Collection framework. it uses a technique called hashing. It implements the map interface.
+    -> It is a part of java Collection framework.It uses a technique called hashing.It implements the map interface.
     -> It stores the data in the pair of key and value
     -> HashMap contains an array of nodes where nodes represent the class.
     -> It uses an array and LinkList to store the data internally for storing key and value.

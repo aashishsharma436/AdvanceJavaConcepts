@@ -46,6 +46,9 @@ public class Comparble {
         // compareTo method by year
         Collections.sort(l);
 
+        //Sort movies in reverse order
+        Collections.sort(l,Collections.reverseOrder());
+
         // Display the sorted list of movies
         System.out.println("Movies after sorting by year:");
         l.forEach(m-> System.out.println(m.getName() + " " + m.getRating() + " " + m.getYear()));

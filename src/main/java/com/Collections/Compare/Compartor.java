@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 class User{
@@ -39,14 +40,15 @@ class Sortbyroll implements Comparator<User> {
 public class Compartor {
 
     public static void main(String[] args){
-        List<User> list = new ArrayList(Arrays.asList(new User("ABCD",2),new User("DEFG",1)));
-        list.stream().sorted(new Sortbyroll());
-        list.forEach(e->{
-            System.out.println(e.getName());
-        });
+        List<User> list = new ArrayList(Arrays.asList(new User("ABCD",4),new User("DEFG",1)));
 
-        list.stream().sorted(new Sortbyname());
-        list.forEach(e-> System.out.println(e.getRollNo()));
+        //list = list.stream().sorted(new Sortbyroll());
+        list = list.stream().sorted(Comparator.comparingInt(User::getRollNo)).collect(Collectors.toList());
+        list.forEach(e-> System.out.println("Roll No: "+ e.getRollNo()+" Name: "+e.getName()));
 
+        //list = list.stream().sorted(new Sortbyname());
+        list = list.stream().sorted(Comparator.comparing(User::getName)).collect(Collectors.toList());
+        list = list.stream().sorted(Comparator.comparing(User::getName)).collect(Collectors.toList());
+        list.forEach(e-> System.out.println("Roll No: "+ e.getRollNo()+" Name: "+e.getName()));
     }
 }
